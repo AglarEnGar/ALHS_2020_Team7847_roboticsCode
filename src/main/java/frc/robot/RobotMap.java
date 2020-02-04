@@ -31,7 +31,14 @@ public class RobotMap {
   
   public static Spark shooter1;
 
+  // ball intake motor/servo channels TODO: assign correct values to constants below
+  public static int EXTENDER_CHANNEL = -1;
+  public static int INTAKE_CHANNEL = -1;
 
+  // ball intake constants
+  public static double EXTENDER_IN  = 0;  // 0-4096
+  public static double EXTENDER_OUT = 1024;  // 0-4096
+  public static double INTAKE_SPEED = 1.0;  // 0-1
 
   // If you are using multiple modules, make sure to define both the port
   // number and the module. For example you with a rangefinder:
