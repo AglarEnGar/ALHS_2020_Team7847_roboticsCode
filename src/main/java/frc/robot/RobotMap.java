@@ -9,6 +9,8 @@ package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
+import edu.wpi.first.wpilibj.Spark;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -22,11 +24,13 @@ public class RobotMap {
   // public static int leftMotor = 1;
   // public static int rightMotor = 2;
 
-  public static VictorSPX leftMotor1 = new VictorSPX(1);
+  public static VictorSPX leftMotor1;
   public static VictorSPX leftMotor2;
   public static VictorSPX rightMotor1;
   public static VictorSPX rightMotor2;
   
+  public static Spark shooter1;
+
 
 
   // If you are using multiple modules, make sure to define both the port
