@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController.Button;
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -21,6 +24,16 @@ public class OI {
 // Joystick stick = new Joystick(port);
   // Button button = new JoystickButton(stick, buttonNumber);
 
+
+
+  //TankDrive Controls
+public static Joystick left = new Joystick(1);
+public static Joystick right = new Joystick(2);
+
+
+
+//Conveyer button
+public static Button activate;
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.

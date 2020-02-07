@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.DriveTrainCommand;
+import frc.robot.subsystems.ConveyerBeltSubsystem;
 import frc.robot.subsystems.DriveTrainSubsystem;
 
 
@@ -26,7 +27,7 @@ import frc.robot.subsystems.DriveTrainSubsystem;
 public class Robot extends TimedRobot {
   public static DriveTrainSubsystem DriveTrain = new DriveTrainSubsystem();
   public static OI oi;
-
+  public static ConveyerBeltSubsystem conveyerBelt;
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
 

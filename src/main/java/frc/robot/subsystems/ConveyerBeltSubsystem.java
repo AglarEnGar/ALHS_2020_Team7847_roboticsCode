@@ -15,6 +15,7 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.XboxController.Button;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
@@ -23,18 +24,25 @@ import frc.robot.RobotMap;
 /**
  * An example subsystem. You can replace with me with your own subsystem.
  */
-public class testSubsystem extends Subsystem {
+public class ConveyerBeltSubsystem extends Subsystem {
 
-  
-  public void testSubsystemGForward(){
-    RobotMap.testSpark1 = new CANSparkMax(1,  MotorType.kBrushless);
+  VictorSPX conveyer = new VictorSPX(RobotMap.CONVEYER_BELT);
+ public ConveyerBeltSubsystem (){
+   
   }
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
- 
+ public void goUp(double button) {
+  conveyer.set(ControlMode.PercentOutput, button);
+ }
 
- 
-  
+ public void goDown(double button) {
+  conveyer.set(ControlMode.PercentOutput, -button);
+ }
+
+ public void stop(double button) {
+  conveyer.set(ControlMode.PercentOutput, 0);
+ }
 
   @Override
   public void initDefaultCommand() {

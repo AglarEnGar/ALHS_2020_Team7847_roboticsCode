@@ -20,10 +20,10 @@ import frc.robot.commands.DriveTrainCommand;
 public class DriveTrainSubsystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-  VictorSPX LeftVictor1 = new VictorSPX(1);
-  VictorSPX LeftVictor2 = new VictorSPX(2);
-  VictorSPX RightVictor1 = new VictorSPX(3);
-  VictorSPX RightVictor2 = new VictorSPX(4);
+  VictorSPX LeftVictor1 = new VictorSPX(RobotMap.LEFT_MOTOR1_ID);
+  VictorSPX LeftVictor2 = new VictorSPX(RobotMap.LEFT_MOTOR2_ID);
+  VictorSPX RightVictor1 = new VictorSPX(RobotMap.RIGHT_MOTOR1_ID);
+  VictorSPX RightVictor2 = new VictorSPX(RobotMap.RIGHT_MOTOR2_ID);
 
   public void teleopDrive() {
     LeftVictor2.follow(LeftVictor1);
@@ -41,7 +41,7 @@ public class DriveTrainSubsystem extends Subsystem {
   }
   public void TeleopDrive(double left, double right){
     LeftVictor1.set(ControlMode.PercentOutput, left);
-    RightVictor1.set(ControlMode.PercentOutput, -right);
+    RightVictor1.set(ControlMode.PercentOutput, right);
   }
   public void Stop(){
     LeftVictor1.set(ControlMode.PercentOutput, 0);

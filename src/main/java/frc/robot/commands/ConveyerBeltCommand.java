@@ -8,11 +8,12 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.Robot;
 
 public class ConveyerBeltCommand extends Command {
   public ConveyerBeltCommand() {
     // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+     requires(Robot.conveyerBelt);
   }
 
   // Called just before this Command runs the first time
@@ -23,6 +24,7 @@ public class ConveyerBeltCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    
   }
 
   // Make this return true when this Command no longer needs to run execute()

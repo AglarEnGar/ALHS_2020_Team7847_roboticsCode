@@ -29,7 +29,7 @@ public class DriveTrainCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.DriveTrain.teleopDrive(); //the Joystcks must be put in the parameter places here
+    Robot.DriveTrain.TeleopDrive(Robot.oi.left.getY(), Robot.oi.left.getX()); //the Joystcks must be put in the parameter places here
   }
 
   // Make this return true when this Command no longer needs to run execute()
