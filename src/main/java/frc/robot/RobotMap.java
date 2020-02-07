@@ -23,22 +23,27 @@ public class RobotMap {
 
   // public static int leftMotor = 1;
   // public static int rightMotor = 2;
-
+//drivetrain motors
   public static VictorSPX leftMotor1;
   public static VictorSPX leftMotor2;
   public static VictorSPX rightMotor1;
   public static VictorSPX rightMotor2;
+  //drivetrain motor id's
+  public static int LEFT_MOTOR1_ID = 1;
+  public static int LEFT_MOTOR2_ID = 2;
+  public static int RIGHT_MOTOR1_ID = 3;
+  public static int RIGHT_MOTOR2_ID = 4;
   
   public static Spark shooter1;
 
   // ball intake motor/servo channels TODO: assign correct values to constants below
-  public static int EXTENDER_CHANNEL = -1;
-  public static int INTAKE_CHANNEL = -1;
+  public static int EXTENDER_CHANNEL;
+  public static int INTAKE_CHANNEL;
 
   // ball intake constants
-  public static double EXTENDER_IN  = 0;  // 0-4096
-  public static double EXTENDER_OUT = 1024;  // 0-4096
-  public static double INTAKE_SPEED = 1.0;  // 0-1
+  public static double EXTENDER_IN;  // 0-4096
+  public static double EXTENDER_OUT;  // 0-4096
+  public static double INTAKE_SPEED;  // 0-1
 
   // If you are using multiple modules, make sure to define both the port
   // number and the module. For example you with a rangefinder:
