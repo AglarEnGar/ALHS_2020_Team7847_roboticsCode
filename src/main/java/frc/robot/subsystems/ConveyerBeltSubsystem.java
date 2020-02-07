@@ -9,25 +9,32 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.SparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.Robot;
 import frc.robot.RobotMap;
-import frc.robot.commands.DriveTrainCommand;
+
 
 /**
  * An example subsystem. You can replace with me with your own subsystem.
  */
-public class subsystem extends Subsystem {
+public class testSubsystem extends Subsystem {
 
-  public static Spark shot1 = new Spark(5);
+  
+  public void testSubsystemGForward(){
+    RobotMap.testSpark1 = new CANSparkMax(1,  MotorType.kBrushless);
+  }
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
  
 
  
-  //put methods for controlling this subsystem
-  //here. Coall these from commands.
+  
 
   @Override
   public void initDefaultCommand() {

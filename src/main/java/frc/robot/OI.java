@@ -17,7 +17,8 @@ public class OI {
   //// joystick.
   // You create one by telling it which joystick it's on and which button
   // number it is.
-  // Joystick stick = new Joystick(port);
+
+// Joystick stick = new Joystick(port);
   // Button button = new JoystickButton(stick, buttonNumber);
 
   // There are a few additional built in buttons you can use. Additionally,
