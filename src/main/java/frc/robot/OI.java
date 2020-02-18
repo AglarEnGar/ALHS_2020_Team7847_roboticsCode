@@ -9,6 +9,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -27,13 +28,20 @@ public class OI {
 
 
   //TankDrive Controls
-public static Joystick left = new Joystick(1);
-public static Joystick right = new Joystick(2);
+  public static Joystick left = new Joystick(1);
+  public static Joystick right = new Joystick(2);
+
+  static int conveyorId = 1;  // left joystick 
+  static int intakeId = 2;  // right joystick
+  static int shooterId = 1;  // right joystick
+  //Conveyer button
+  public static JoystickButton conveyorButton = new JoystickButton(left, conveyorId);
+  // intake button
+  public static JoystickButton intakeButton = new JoystickButton(right, intakeId);
+  //shooter button
+  public static JoystickButton shooterButton = new JoystickButton(right, shooterId);
 
 
-
-//Conveyer button
-public static Button activate;
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
   // commands the same as any other Button.
