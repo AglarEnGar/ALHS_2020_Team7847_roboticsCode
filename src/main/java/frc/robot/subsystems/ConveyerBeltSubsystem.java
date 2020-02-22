@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.XboxController.Button;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
+import frc.robot.commands.ConveyerBeltCommand;
 
 
 /**
@@ -48,7 +49,7 @@ public class ConveyerBeltSubsystem extends Subsystem {
   public void initDefaultCommand() {
     
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+    setDefaultCommand(new ConveyerBeltCommand());
   }
   
 }

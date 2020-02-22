@@ -34,11 +34,15 @@ public class RobotMap {
   public static int RIGHT_MOTOR1_ID = 3;
   public static int RIGHT_MOTOR2_ID = 4;
   
-  public static Spark shooter1;
+  //public static Spark shooter1;
 
-  // ball intake motor/servo channels TODO: assign correct values to constants below
-  public static int CONVEYER_BELT;
+  // ball intake motor/servo channels 
+  public static int CONVEYER_BELT = 6; 
 
+  public static int INTAKE = 5;
+
+  public static int SHOOTER_LEFT = 7;
+  public static int SHOOTER_RIGHT = 8;
 
   // ball intake constants
  // 0-1
